@@ -1,0 +1,27 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- create:
+    - ~/downloads
+    - ~/.vim/undo-history
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+- clean: ['~']
+
+- link:
+    ~/.profile: profile
+    ~/.bashrc: bash/bashrc
+    ~/.bash_logout: bash/bash_logout
+    ~/.bash_aliases: bash/bash_aliases
+    ~/.gitconfig: gitconfig
+    ~/.vim: vim/vim
+    ~/.vimrc: vim/vimrc
+    ~/.zshenv: zsh/zshenv
+    ~/.zshrc: zsh/zshrc
+    ~/.spacemacs: spacemacs/spacemacs
+    ~/.doom.d: doom-emacs/doom.d
+

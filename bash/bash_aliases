@@ -1,0 +1,5 @@
+alias temperature='/opt/vc/bin/vcgencmd measure_temp'
+alias clang-format=clang-format-9
+alias vi=nvim
+export PATH=$PATH:~/.emacs.d/bin
+export WORKON_HOME=~/code/python

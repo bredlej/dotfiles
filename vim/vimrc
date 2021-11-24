@@ -1,0 +1,37 @@
+execute pathogen#infect()
+set visualbell
+set number
+set smartindent
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
+set noexpandtab
+set history=1000
+set ruler
+set showcmd
+set wildmenu
+set scrolloff=5
+set relativenumber
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-L> <C-W>l
+nnoremap <C-H> <C-W>h
+imap jk <ESC>
+syntax on
+colorscheme dracula
+filetype plugin indent on
+set exrc
+set secure
+set colorcolumn=110
+highlight ColorColummn ctermbg=darkgray
+
+augroup project
+	autocmd!
+	autocmd BufRead,BufNewFile *.h,*.c set filetype=c.doxygen
+augroup END
+
+let &path.="src/include,/usr/include/AL,"
+
+call plug#begin('~/.vim/plugged')
+	Plug 'neoclide/coc.nvim', {'branch': 'release'}
+call plug#end()
