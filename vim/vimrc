@@ -18,7 +18,6 @@ nnoremap <C-L> <C-W>l
 nnoremap <C-H> <C-W>h
 imap jk <ESC>
 syntax on
-colorscheme dracula
 filetype plugin indent on
 set exrc
 set secure
@@ -32,6 +31,3 @@ augroup END
 
 let &path.="src/include,/usr/include/AL,"
 
-call plug#begin('~/.vim/plugged')
-	Plug 'neoclide/coc.nvim', {'branch': 'release'}
-call plug#end()
